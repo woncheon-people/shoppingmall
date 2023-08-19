@@ -7,11 +7,6 @@ spring:
     url: jdbc:h2:tcp://localhost/~/shoppingmall
     username: sa
     password: sa
-#  datasource:
-#    driver-class-name: org.mariadb.jdbc.Driver
-#    url: jdbc:mariadb://43.201.128.121:4006/shoppingmall?characterEncoding=UTF-8&serverTimezone=UTC
-#    username: root
-#    password: worldcupro206!
   jpa:
     hibernate:
       ddl-auto: update
