@@ -5,10 +5,9 @@ import jakarta.persistence.*;
 import lombok.*;
 
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter @Setter
 @Entity
+@RequiredArgsConstructor
+@Getter @Setter
 public class ProductOption {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,5 +1,6 @@
-package com.woncheonpeople.shoppingmall.domain.product;
+package com.woncheonpeople.shoppingmall.repository;
 
+import com.woncheonpeople.shoppingmall.domain.product.Product;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,10 +8,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 @SpringBootTest
-public class ProductRepositoryTest {
+public class ProductJpaRepositoryTest {
 
     @Autowired
-    ProductRepository productRepository;
+    ProductJpaRepository productRepository;
 
     @Test // 상품 저장테스트
     public void createProductTest(){

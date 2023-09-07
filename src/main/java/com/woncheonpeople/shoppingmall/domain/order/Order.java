@@ -1,10 +1,12 @@
-package com.woncheonpeople.shoppingmall.domain;
+package com.woncheonpeople.shoppingmall.domain.order;
 
+import com.woncheonpeople.shoppingmall.domain.member.Member;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,4 +24,7 @@ public class Order {
 
     @OneToMany(mappedBy = "order", targetEntity = OrderItem.class, cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     private List<OrderItem> orderItems = new ArrayList<>();
+
+    @Column
+    private LocalDateTime orderDate;
 }
