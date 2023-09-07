@@ -1,16 +1,19 @@
 package com.woncheonpeople.shoppingmall.domain.member;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
 @Embeddable
-@NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
+@Getter @Setter
 public class Address {
+    @Column
     private String postalCode;
+
+    @Column
     private String address1;
+
+    @Column
     private String address2;
 }

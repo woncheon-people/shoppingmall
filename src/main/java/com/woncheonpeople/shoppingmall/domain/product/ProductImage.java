@@ -1,21 +1,22 @@
 package com.woncheonpeople.shoppingmall.domain.product;
 
-import com.woncheonpeople.shoppingmall.domain.product.Product;
 import jakarta.persistence.*;
-import lombok.*;
-
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @RequiredArgsConstructor
 @Getter @Setter
-public class ProductOption {
+public class ProductImage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="product_value")
-    private String value; // 옵션
-
     @ManyToOne(targetEntity = Product.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_id", updatable = false)
     private Product product;
+
+    @Column
+    private String imageUrl;
 }
