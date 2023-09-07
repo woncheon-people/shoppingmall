@@ -6,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Entity(name = "members")
-@RequiredArgsConstructor
 @Getter
 @Setter
 public class Member {
@@ -16,4 +15,8 @@ public class Member {
 
     @Column
     private String name;
+
+    public Member(String name) {
+        this.name = name;
+    }
 }
