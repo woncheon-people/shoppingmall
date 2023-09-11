@@ -1,11 +1,10 @@
 package com.woncheonpeople.shoppingmall.domain.product;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
+@NoArgsConstructor
 @RequiredArgsConstructor
 @Getter @Setter
 public class ProductImage {
@@ -15,8 +14,10 @@ public class ProductImage {
 
     @ManyToOne(targetEntity = Product.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id", updatable = false)
+    @NonNull
     private Product product;
 
     @Column
+    @NonNull
     private String imageUrl;
 }
