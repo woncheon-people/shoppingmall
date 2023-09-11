@@ -6,6 +6,7 @@ import lombok.*;
 
 
 @Entity
+@NoArgsConstructor
 @RequiredArgsConstructor
 @Getter @Setter
 public class ProductOption {
@@ -13,9 +14,11 @@ public class ProductOption {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="product_value")
-    private String value; // 옵션
-
     @ManyToOne(targetEntity = Product.class, fetch = FetchType.LAZY)
+    @NonNull
     private Product product;
+
+    @Column(name="product_value")
+    @NonNull
+    private String value; // 옵션
 }

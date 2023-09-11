@@ -1,5 +1,7 @@
 package com.woncheonpeople.shoppingmall.repository;
 
+import com.woncheonpeople.shoppingmall.domain.member.Member;
+import com.woncheonpeople.shoppingmall.domain.product.Product;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,14 +18,14 @@ public class OrderJpaRepositoryTest {
     @Autowired
     private ProductJpaRepository productRepository;
 
-    @Test
-//    @Transactional
-    void save() {
-        Member member = new Member("홍길동");
-        Product productA = new Product("상품 A");
-        Product productB = new Product("상품 B");
-        memberRepository.save(member);
-        productRepository.save(productA);
-        productRepository.save(productB);
-    }
+//    @Test
+////    @Transactional
+//    void save() {
+//        Member member = new Member("홍길동");
+//        Product productA = new Product("상품 A");
+//        Product productB = new Product("상품 B");
+//        memberRepository.save(member);
+//        productRepository.save(productA);
+//        productRepository.save(productB);
+//    }
 }

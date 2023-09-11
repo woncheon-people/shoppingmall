@@ -14,3 +14,5 @@ spring:
       hibernate:
         format_sql: true #To beautify or pretty print the SQL
     show-sql: true #show sql
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
